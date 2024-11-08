@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d4d4f0, #b3cde0);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.search-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: normal;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border: 1px solid #a3b3d1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для кнопок */
+.search-engines {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.search-engines button {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    background: linear-gradient(135deg, #e1eaf4, #cbd9e6);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.search-engines button:hover {
+    background: linear-gradient(135deg, #d6e2ee, #c2d4e1);
+    transform: translateY(-2px);
+}
+
+.search-engines button:active {
+    transform: scale(0.98);
+}
+
+.search-engines button:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.1);
+    outline-offset: 3px;
+}
