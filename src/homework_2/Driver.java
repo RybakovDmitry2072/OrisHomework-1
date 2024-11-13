@@ -1,22 +1,23 @@
 package homework_2;
 
-public class Human {
+public class Driver {
 
     private int id;
 
-    private String first_name;
+    private String firstName;
 
-    private String last_name;
+    private String lastName;
 
     private int age;
 
-    public Human() {    }
+    public Driver() {
+    }
 
-    public Human(int age, String first_name, int id, String last_name) {
+    public Driver(int age, String firstName, int id, String lastName) {
         this.age = age;
-        this.first_name = first_name;
+        this.firstName = firstName;
         this.id = id;
-        this.last_name = last_name;
+        this.lastName = lastName;
     }
 
     public int getAge() {
@@ -27,12 +28,12 @@ public class Human {
         this.age = age;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public int getId() {
@@ -43,11 +44,21 @@ public class Human {
         this.id = id;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Driver{" +
+                "age=" + age +
+                ", id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
