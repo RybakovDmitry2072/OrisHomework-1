@@ -18,7 +18,11 @@ public class DataBaseConnection {
     static  {
 
         Properties properties = new Properties();
-
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         try (FileInputStream fileInputStream = new FileInputStream("src/resources/db.properties")) {
 
             properties.load(fileInputStream);
